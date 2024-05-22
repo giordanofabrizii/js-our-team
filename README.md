@@ -12,3 +12,22 @@ BONUS 1:
 Trasformare la stringa foto in una immagine effettiva
 BONUS 2:
 Organizzare i singoli membri in card/schede
+
+<!-- > PROCEDIMENTO -->
+
+Creo un array di oggetti con i dati forniti
+
+ciclo per ogni elemento dell'array
+    ciclo per ogni informazione dell'elemento
+        console.log
+
+MILESTONE 2:
+ciclo per ogni elemento dell'array
+    creo una stringa che comprenda nome, ruolo e stringa
+    aggiungo all'HTML
+
+BONUS:
+creo un elementoHTML stile "card"
+ciclo for per ogni elemento dell'array
+    assegno alla card i valori dell'elemento
+    aggiungo all'html
