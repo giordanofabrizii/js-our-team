@@ -3,3 +3,40 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-color: #f5f5f1;
+}
+
+#members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 75rem;
+    margin: 0 auto
+}
+
+/* > ////////////////////////// */
+/* // MEMBER CARD */
+/* > ////////////////////////// */
+
+article {
+    margin: 1rem;
+    width: 23rem;
+    background-color: white;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+article > img {
+    width: 100%;
+}
+
+article> h3 {
+    margin: .5rem 0;
+}
+
+article > h3,
+article > p{
+    color: #6c6761
+}
