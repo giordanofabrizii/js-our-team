@@ -1,18 +1,3 @@
-// Consegna:
-// Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
-// Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
-// MILESTONE 0:
-// Creare l’array di oggetti con le informazioni fornite.
-// MILESTONE 1:
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-// MILESTONE 2:
-
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
-// BONUS 1:
-// Trasformare la stringa foto in una immagine effettiva
-// BONUS 2:
-// Organizzare i singoli membri in card/schede
-
 // > BANCA DATI
 
 // < Wayne Barnett	Founder & CEO	wayne-barnett-founder-ceo.jpg
@@ -59,4 +44,14 @@ for (let index in team) {
     for (let key in team[index]) {
         console.log(team[index][key])
     }
+}
+
+// * Add info in the HTML
+const containerEl = document.getElementById('container');
+
+for (let index in team) {
+    let stringa = `Membro n. ${parseInt(index) + 1}: ${team[index].nome}, ruolo: ${team[index].role}, link dell'immagine: ${team[index].img}`;
+    liEl = document.createElement("li");
+    liEl.append(stringa);
+    containerEl.appendChild(liEl)
 }
