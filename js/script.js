@@ -57,12 +57,6 @@ const team = [
 //     containerEl.appendChild(liEl)
 // }
 
-{/* <article>
-<img src="./img/angela-caroll-chief-editor.jpg" alt="">
-<h3>Angela Caroll</h3>
-<p>Chief Editor</p>
-</article> */}
-
 // // Add card inthe HTML
 const containerEl = document.getElementById('members-container');
 
