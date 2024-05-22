@@ -40,18 +40,51 @@ const team = [
     }
 ];
 
-for (let index in team) {
-    for (let key in team[index]) {
-        console.log(team[index][key])
-    }
-}
+// // Print in the console
+// for (let index in team) {
+//     for (let key in team[index]) {
+//         console.log(team[index][key])
+//     }
+// }
 
-// * Add info in the HTML
-const containerEl = document.getElementById('container');
+// // Add info in the HTML
+// const containerEl = document.getElementById('container');
 
+// for (let index in team) {
+//     let stringa = `Membro n. ${parseInt(index) + 1}: ${team[index].nome}, ruolo: ${team[index].role}, link dell'immagine: ${team[index].img}`;
+//     liEl = document.createElement("li");
+//     liEl.append(stringa);
+//     containerEl.appendChild(liEl)
+// }
+
+{/* <article>
+<img src="./img/angela-caroll-chief-editor.jpg" alt="">
+<h3>Angela Caroll</h3>
+<p>Chief Editor</p>
+</article> */}
+
+// // Add card inthe HTML
+const containerEl = document.getElementById('members-container');
+
+// create elements
 for (let index in team) {
-    let stringa = `Membro n. ${parseInt(index) + 1}: ${team[index].nome}, ruolo: ${team[index].role}, link dell'immagine: ${team[index].img}`;
-    liEl = document.createElement("li");
-    liEl.append(stringa);
-    containerEl.appendChild(liEl)
+    let member = team[index];
+    let articleEl = document.createElement("article");
+
+    // then create the elements inside the article
+    let imgEl = document.createElement("img");
+    let path = `./img/${member.img}`;
+    imgEl.src = path;
+    articleEl.appendChild(imgEl);
+
+    let nameEl = document.createElement("h3");
+    nameEl.append(member.nome);
+    articleEl.appendChild(nameEl);
+
+    let roleEl = document.createElement("p");
+    roleEl.append(member.role);
+    articleEl.appendChild(roleEl);
+
+    // insert the article in the container
+    containerEl.appendChild(articleEl);
 }
